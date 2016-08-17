@@ -1,0 +1,144 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: 'Lato', sans-serif;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main_header {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.answer {
+  display: flex;
+}
+
+.answer label {
+  padding: 10px;
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+.answer .radio_button:not(:disabled) + label {
+  cursor: pointer;
+}
+
+.answer .radio_button:not(:disabled) + label:hover,
+.radio_button:checked + label{
+  background-color: #b9e5f8;
+}
+
+.radio_button {
+  display: none;
+}
+
+.number_container {
+  background-color: #b9e5f8;
+  flex: 1 20px;
+  text-align: center;
+  align-self: stretch;
+  display: flex;
+}
+
+.number {
+  flex: 1;
+  align-self: center;
+}
+
+.quizButton {
+  flex: 3;
+  padding: 10px;
+  display: block;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quizButton:disabled {
+  cursor: default;
+  opacity: .5;
+}
+
+.quizButton:hover:not(:disabled) {
+  color: #000000;
+}
+
+.submit {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #77d577;
+}
+
+.next {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #9d9dac;
+}
+
+.complete {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: darkmagenta;
+}
+
+.prev {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: darkturquoise;
+}
+
+.mark_correct + label {
+  background-color: #8fec8f;
+}
+.mark_correct + label:after {
+  font-family: FontAwesome;
+  margin-left: 5px;
+  color: green;
+  content: "\f00c";
+}
+
+.mark_incorrect + label {
+  background-color: rgba(255, 0, 0, 0.22);
+}
+.mark_incorrect + label:after {
+  font-family: FontAwesome;
+  margin-left: 5px;
+  color: red;
+  content: "\f00d";
+}
+
+.mark_green + label {
+  background-color: #8fec8f;
+}
+
+.question_counter {
+  margin-right: 10px;
+  font-weight: bold;
+  min-width: 47px;
+}
+
+.quizLink {
+  display: block;
+  text-align: center;
+  background: aqua;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.quizLink:hover {
+  opacity: .7;
+}
